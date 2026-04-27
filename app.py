@@ -156,11 +156,7 @@ input[type="password"] {
     color: #ffd166;
 }
 
-.footer {
-    margin-top: 20px;
-    font-size: 13px;
-    color: #cccccc;
-}
+
 </style>
 </head>
 <body>
@@ -180,7 +176,7 @@ input[type="password"] {
     {% endwith %}
 
     <form method="POST" enctype="multipart/form-data">
-        <input type="file" id="fileInput" name="file" multiple required onchange="updateFileCount()">
+        <input type="file" id="fileInput" name="file" multiple accept="*/*" required onchange="updateFileCount()">
 
         <div class="file-count" id="fileCount">No files selected</div>
 
@@ -199,10 +195,7 @@ input[type="password"] {
         <button class="btn decrypt" name="action" value="decrypt">🔓 Decrypt Files</button>
     </form>
 
-    <div class="footer">
-        Developed by Pankaj Kuralkar<br>
-        Final Year Mini Project
-    </div>
+    
 </div>
 
 <script>
